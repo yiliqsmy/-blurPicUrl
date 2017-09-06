@@ -18,7 +18,7 @@ for i in range(100):
 # 输人要 下载音乐的数量，1到100。
     name = str(i+1) + arr[i+1]['name'] +'.jpg'
   # print("正在连接"+name)
-    link = arr[i+1]['album']['blurPicUrl']
+    link = arr[i+1]['album']['blurPicUrl']  #第一首歌有非法字符所以跳过
     urllib.request.urlretrieve(str(link),filename='网易云音乐/'+name)
     print (name+"下载完成")  
 
